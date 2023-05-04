@@ -4,12 +4,10 @@ const app = getApp<IAppOption>()
 
 Page({
   data: {
-    motto: 'Hello AI World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    active: 'home',
+  },
+  onChange(event) {
+    this.setData({ active: event.detail });
   },
   // 事件处理函数
   bindViewTap() {

@@ -6,7 +6,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "音乐分离 | 人声分离",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
