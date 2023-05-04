@@ -1,8 +1,7 @@
 # music_separation_miniprogram
-
 > 音乐分离小程序
 
-## 代码提交说明
+## Git提交规范
 - feat：新功能（feature）
 - fix：修补bug
 - docs：文档（documentation）
@@ -10,3 +9,9 @@
 - refactor：重构（即不是新增功能，也不是修改bug的代码变动）
 - test：增加测试
 - chore：构建过程或辅助工具的变动
+
+# 参考链接
+## 1、微信小程序官网
+https://developers.weixin.qq.com/miniprogram/dev/framework/
+## 2、UI库——vant-weapp
+https://youzan.github.io/vant-weapp/#/home
