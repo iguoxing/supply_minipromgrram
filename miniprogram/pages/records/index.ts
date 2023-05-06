@@ -1,19 +1,11 @@
-// pages/user/index.ts
+// pages/records/index.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 'user',
-    showShare: false,
-    options: [
-      { name: '微信', icon: 'wechat', openType: 'share' },
-      // { name: '微博', icon: 'weibo' },
-      // { name: '复制链接', icon: 'link' },
-      // { name: '分享海报', icon: 'poster' },
-      // { name: '二维码', icon: 'qrcode' },
-    ],
+    active: 'records',
   },
   onChange(event) {
     let name = event.detail
@@ -21,21 +13,6 @@ Page({
     wx.redirectTo({
       url: '../'+ name +'/index',
     })
-  },
-  goToRecords(){
-    wx.redirectTo({
-      url: '../records/index',
-    })
-  },
-  onClick(event) {
-    this.setData({ showShare: true });
-  },onClose() {
-    this.setData({ showShare: false });
-  },
-
-  onSelect(event) {
-    // Toast(event.detail.name);
-    this.onClose();
   },
   /**
    * 生命周期函数--监听页面加载

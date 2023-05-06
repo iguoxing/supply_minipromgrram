@@ -14,7 +14,7 @@
       <view class="info">原价：20元/100min</view>
     </view>
   </view>
-  <van-button class="btn-buy" type="info" block round>立即开通</van-button>
+  <van-button type="info" block round>立即开通</van-button>
   <view class="title mt-1">会员权益</view>
   <view class="section w-all">
     <view class="info">1、在线预览/下载；</view>

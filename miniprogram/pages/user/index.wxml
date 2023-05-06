@@ -11,12 +11,18 @@
       </view>
     </view>
     <van-cell-group class="menu">
-      <van-cell icon="records" title="分离记录"/>
+      <van-cell icon="records" title="分离记录" bindtap="goToRecords"/>
       <van-cell icon="orders-o" title="我的订单"/>
       <van-cell icon="contact" title="联系客服"/>
-      <van-cell icon="share-o" title="分享给好友"/>
+      <van-cell icon="share-o" title="分享给好友" bind:click="onClick"/>
     </van-cell-group>
-
+    <van-share-sheet
+      show="{{ showShare }}"
+      title="立即分享给好友"
+      options="{{ options }}"
+      bind:select="onSelect"
+      bind:close="onClose"
+    />
   </view>
   <van-tabbar active="{{ active }}" bind:change="onChange">
     <van-tabbar-item name="index" icon="wap-home-o">首页</van-tabbar-item>

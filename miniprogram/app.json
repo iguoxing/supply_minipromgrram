@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/upload/music",
     "pages/vip/index",
+    "pages/records/index",
     "pages/user/index",
     "pages/logs/logs"
   ],
