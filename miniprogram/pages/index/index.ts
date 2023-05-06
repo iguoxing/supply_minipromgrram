@@ -4,15 +4,20 @@ const app = getApp<IAppOption>()
 
 Page({
   data: {
-    active: 'home',
+    active: 'index',
   },
   onChange(event) {
-    this.setData({ active: event.detail });
+    let name = event.detail
+    this.setData({ active:  name});
+    // console.log('../'+ name +'/index' )
+    wx.redirectTo({
+      url: '../'+ name +'/index',
+    })
   },
   // 事件处理函数
-  bindViewTap() {
+  bindViewUpload() {
     wx.navigateTo({
-      url: '../logs/logs',
+      url: '../upload/music',
     })
   },
   onLoad() {

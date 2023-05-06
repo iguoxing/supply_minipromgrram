@@ -1,0 +1,16 @@
+<!--pages/upload/music.wxml-->
+<view class="page">
+  <view class="title">上传音频</view>
+  <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead">
+    <view class="upload">
+      <van-icon name="live" size="48px"/>
+    </view>
+  </van-uploader>
+  <view class="info">支持 mp3，wav，flac 格式，最大不超过 50MB</view>
+  <view class="title">结果下载</view>
+  <view class="result">
+    <van-icon name="music" size="48px" color="gray"/>
+  </view>
+  <view class="down">下载结果</view>
+
+</view>

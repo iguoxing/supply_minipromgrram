@@ -1,0 +1,32 @@
+<!--pages/vip/index.wxml-->
+<view class="page">
+  <image class="banner" src="https://metag.oss-cn-hangzhou.aliyuncs.com/miniprogram/music_separation/img/music.png?OSSAccessKeyId=LTAI5tMch8zYHoxEUxLmrF6c&Expires=1714825979&Signature=O2k5VKoZKaBg0%2FUivFtqOZGI5bc%3D" />
+  <view class="title">开通会员</view>
+  <view class="flex mb-1">
+    <view class="section first {{ type==1?'active':'' }}" data-type="1" bind:tap="selectType">
+      <view class="info">会员包月/月卡</view>
+      <view class="price">现价：39.9元/月</view>
+      <view class="info">原价：50元/月</view>
+    </view>
+    <view class="section {{ type==2?'active':'' }}" data-type="2" bind:tap="selectType">
+      <view class="info">会员时长卡</view>
+      <view class="price">现价：9.9元/100min</view>
+      <view class="info">原价：20元/100min</view>
+    </view>
+  </view>
+  <van-button class="btn-buy" type="info" block round>立即开通</van-button>
+  <view class="title mt-1">会员权益</view>
+  <view class="section w-all">
+    <view class="info">1、在线预览/下载；</view>
+    <view class="info">2、支持100MB 音乐支持 20分钟 音乐；</view>
+    <view class="info">3、数据保存三个月。</view>
+  </view>
+
+  <van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item name="index" icon="wap-home-o">首页</van-tabbar-item>
+    <van-tabbar-item name="records" icon="records">记录</van-tabbar-item>
+    <van-tabbar-item name="vip" icon="music-o">会员</van-tabbar-item>
+    <van-tabbar-item name="user" icon="user-o">我的</van-tabbar-item>
+  </van-tabbar>
+</view>
+

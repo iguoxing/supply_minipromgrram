@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/upload/music",
+    "pages/vip/index",
     "pages/logs/logs"
   ],
   "window": {
