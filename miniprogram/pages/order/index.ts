@@ -1,22 +1,15 @@
-// pages/records/index.ts
+// pages/order/index.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 'records',
+    hasData:true,
   },
-  onChange(event) {
-    let name = event.detail
-    this.setData({ active:  name});
+  goToVip(){
     wx.redirectTo({
-      url: '../'+ name +'/index',
-    })
-  },
-  goToHome(){
-    wx.redirectTo({
-      url: '../index/index',
+      url: '../vip/index',
     })
   },
   /**

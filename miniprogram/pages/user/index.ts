@@ -27,6 +27,16 @@ Page({
       url: '../records/index',
     })
   },
+  goToOrder(){
+    wx.navigateTo({
+      url: '../order/index',
+    })
+  },
+  goToService(){
+    wx.navigateTo({
+      url: '../service/index',
+    })
+  },
   onClick(event) {
     this.setData({ showShare: true });
   },onClose() {

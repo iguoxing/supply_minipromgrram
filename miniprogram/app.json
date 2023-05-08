@@ -5,6 +5,8 @@
     "pages/vip/index",
     "pages/records/index",
     "pages/user/index",
+    "pages/order/index",
+    "pages/service/index",
     "pages/logs/logs"
   ],
   "window": {

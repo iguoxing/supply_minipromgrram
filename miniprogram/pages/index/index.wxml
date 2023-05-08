@@ -23,8 +23,13 @@
       <view class="name">提取音频中人声</view>
     </view>
   </view>
-  <view class="title">音乐转谱</view>
-  <view class="list single">
+  <view class="title">其他工具</view>
+  <view class="list">
+  <!-- <view class="list single"> -->
+    <view class="item" bindtap="bindViewUpload">
+      <van-icon name="setting" size="56rpx"/>
+      <view class="name">视频去水印</view>
+    </view>
     <view class="item" bindtap="bindViewUpload">
       <van-icon name="music" size="56rpx"/>
       <view class="name">音乐转五线谱</view>

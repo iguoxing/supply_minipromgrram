@@ -12,8 +12,8 @@
     </view>
     <van-cell-group class="menu">
       <van-cell icon="records" title="分离记录" bindtap="goToRecords"/>
-      <van-cell icon="orders-o" title="我的订单"/>
-      <van-cell icon="contact" title="联系客服"/>
+      <van-cell icon="orders-o" title="我的订单" bindtap="goToOrder"/>
+      <van-cell icon="contact" title="联系客服" bindtap="goToService"/>
       <van-cell icon="share-o" title="分享给好友" bind:click="onClick"/>
     </van-cell-group>
     <van-share-sheet

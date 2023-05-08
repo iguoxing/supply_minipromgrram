@@ -1,0 +1,29 @@
+<view class="page" wx:if="{{!hasData}}">
+  <view class="notice">
+    <van-empty description="暂时没有记录~" />
+    <van-button type="info" round bindtap="goToVip">立即购买</van-button>
+  </view>
+</view>
+<view class="has-data">
+  <view class="title">最近一年的购买记录</view>
+  <view class="section">
+    <view>
+      <view class="name">音乐分离服务</view>
+      <view class="date">2022-01-01 12:00</view>
+    </view>
+    <view>
+      <text class="price">￥39.9</text>
+      <text class="state">已完成</text>
+    </view>
+  </view>
+  <view class="section">
+    <view>
+      <view class="name">音乐分离服务</view>
+      <view class="date">2022-01-01 12:00</view>
+    </view>
+    <view>
+      <text class="price">￥9.9</text>
+      <text class="state">已完成</text>
+    </view>
+  </view>
+</view>

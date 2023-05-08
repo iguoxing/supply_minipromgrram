@@ -1,0 +1,16 @@
+<view class="section">
+  <view class="title">如有问题请联系我们的客服人员</view>
+  <view class="item">
+    <van-icon name="phone" />
+    <text>电话：+86 15510058126</text>
+  </view>
+  <view class="item">
+    <van-icon name="send-gift" />
+    <text>邮箱：i@zhaoguoxing.com</text>
+  </view>
+  <view class="item">
+    <van-icon name="wechat" />
+    <text>微信号：learningisconnecting</text>
+  </view>
+  <image class="img"></image>
+</view>

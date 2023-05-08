@@ -1,24 +1,13 @@
-// pages/records/index.ts
+// pages/service/index.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 'records',
+
   },
-  onChange(event) {
-    let name = event.detail
-    this.setData({ active:  name});
-    wx.redirectTo({
-      url: '../'+ name +'/index',
-    })
-  },
-  goToHome(){
-    wx.redirectTo({
-      url: '../index/index',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

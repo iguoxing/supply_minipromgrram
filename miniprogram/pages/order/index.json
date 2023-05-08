@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText":"音乐分离 | 我的订单",
+  "usingComponents": {
+    "van-empty": "@vant/weapp/empty/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}
