@@ -1,0 +1,16 @@
+<button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button> 
+<van-cell-group>
+  <van-field
+    label="昵称"
+    model:value="{{ value }}"
+    type="nickname"
+    placeholder="请输入"
+    border="{{ false }}"
+    bindblur="onChange"
+  />
+</van-cell-group>
+<view class="btn"> 
+  <van-button type="info" block round bindtap="save">保存</van-button>
+</view>

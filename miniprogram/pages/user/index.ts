@@ -7,6 +7,7 @@ Page({
   data: {
     active: 'user',
     showShare: false,
+    userdata: {},
     options: [
       { name: '微信', icon: 'wechat', openType: 'share' },
       // { name: '微博', icon: 'weibo' },
@@ -58,7 +59,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    console.info('r--')
+    const r = JSON.parse(wx.getStorageSync("userinfo"))
+    console.info(r)
+    this.setData({
+      userdata: r
+    })
   },
 
   /**

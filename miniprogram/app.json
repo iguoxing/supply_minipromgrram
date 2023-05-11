@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/headname/index",
     "pages/upload/music",
     "pages/vip/index",
     "pages/records/index",

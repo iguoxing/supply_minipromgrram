@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <image class="banner" src="https://metag.oss-cn-hangzhou.aliyuncs.com/miniprogram/music_separation/img/banner.jpg?OSSAccessKeyId=LTAI5tMch8zYHoxEUxLmrF6c&Expires=1714753345&Signature=NLFVN2uuFvnUr2NC6ZKZYf0RPOA%3D" />
+  <!-- <image src="http://tmp/pIZrggfpEQu2b07c69adf6bb5d50d58d4d86a67c6788.jpeg"></image> -->
   <view class="title">视频提取</view>
   <view class="list">
     <view class="item" bindtap="bindViewUpload">
@@ -41,4 +42,15 @@
     <van-tabbar-item name="vip" icon="music-o">会员</van-tabbar-item>
     <van-tabbar-item name="user" icon="user-o">我的</van-tabbar-item>
   </van-tabbar>
+  <van-dialog id="van-dialog" />
+  <van-dialog
+    use-slot
+    title="提示"
+    show="{{ show }}"
+    show-cancel-button
+    bind:close="onClose"
+    bind:confirm="goToHeadname"
+  >
+    <view class="notice">为了您更好体验，请完善头像和昵称~</view>
+  </van-dialog>
 </view>
