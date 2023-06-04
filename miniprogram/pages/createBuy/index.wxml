@@ -1,0 +1,54 @@
+<van-cell-group>
+  <van-field
+    label="采购合同编号"
+    value="{{ customer_name }}"
+    placeholder="请输入采购合同编号"
+    border="{{ false }}"
+    bind:change="onChangeName"
+  />
+  <van-field
+    label="交付单位"
+    value="{{ customer_name }}"
+    placeholder="请输入交付单位"
+    border="{{ false }}"
+    bind:change="onChangeName"
+  />
+  <van-field
+    label="交付单位签订人"
+    value="{{ customer_name }}"
+    placeholder="请输入交付单位签订人"
+    border="{{ false }}"
+    bind:change="onChangeName"
+  />
+  <van-field
+    label="本公司签订人"
+    value="{{ customer_name }}"
+    placeholder="请输入本公司签订人"
+    border="{{ false }}"
+    bind:change="onChangeName"
+  />
+  <van-cell title="签订开始日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-field
+    label="签订状态"
+    value="{{ customer_name }}"
+    placeholder="请输入签订状态"
+    border="{{ false }}"
+    bind:change="onChangeName"
+  />
+  <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+  <view class="upload">
+    <view class="label">采购合同附件</view>
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+  </view>
+  <view class="upload">
+    <view class="label">采购证明附件</view>
+    <van-uploader file-list="{{ fileList2 }}" bind:after-read="afterRead" />
+  </view>
+  <view class="upload">
+    <view class="label">付款证明附件</view>
+    <van-uploader file-list="{{ fileList3 }}" bind:after-read="afterRead" />
+  </view>
+</van-cell-group>
+<view class="btn"> 
+  <van-button type="info" block round bindtap="save">保存</van-button>
+</view>

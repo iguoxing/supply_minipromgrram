@@ -1,15 +1,54 @@
-// pages/order/index.ts
+import Notify from '@vant/weapp/notify/notify';
+// pages/records/index.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hasData:true,
+    records: [
+      {
+        order_id:'1', //  订单ID
+        demand_id: '2', //产品需求ID
+        deliverer_id: '3', // 发货人ID
+        receiver_id: '4', // 收货人ID
+        receiver_contact: '15652621358', //收货人联系方式
+        deliver_date: '2022.6.1', //发货日期
+        deliver_address: '收货地址', // 收货地址
+        show: false,
+      },
+      {
+        order_id:'12', //  订单ID
+        demand_id: '21', //产品需求ID
+        deliverer_id: '31', // 发货人ID
+        receiver_id: '41', // 收货人ID
+        receiver_contact: '15652621338', //收货人联系方式
+        deliver_date: '2022.4.1', //发货日期
+        deliver_address: '收货地址2', // 收货地址
+        show: false,
+      },
+    ],
+    active: 'order',
   },
-  goToVip(){
+  onChange(event) {
+    let name = event.detail
+    this.setData({ active:  name});
     wx.redirectTo({
-      url: '../vip/index',
+      url: '../'+ name +'/index',
+    })
+  },
+  showFile(){
+    console.log('../index' )
+    Notify({ type: 'warning', message: 'TODO 展示文件内容' });
+  },
+  goToCreate() {
+    wx.navigateTo({
+      url: '../createOrder/index',
+    })
+  },
+  goToHome(){
+    wx.redirectTo({
+      url: '../index/index',
     })
   },
   /**

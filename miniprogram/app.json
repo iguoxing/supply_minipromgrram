@@ -8,6 +8,8 @@
     "pages/order/index",
     "pages/service/index",
     "pages/createneed/index",
+    "pages/createBuy/index",
+    "pages/createOrder/index",
     "pages/logs/logs"
   ],
   "window": {

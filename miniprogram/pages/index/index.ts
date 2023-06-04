@@ -26,7 +26,6 @@ Page({
   onChange(event) {
     let name = event.detail
     this.setData({ active:  name});
-    // console.log('../'+ name +'/index' )
     wx.redirectTo({
       url: '../'+ name +'/index',
     })
