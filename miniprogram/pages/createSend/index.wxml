@@ -4,35 +4,35 @@
     value="{{ order_id }}"
     placeholder="请输入订单ID"
     border="{{ false }}"
-    bind:change="onChangeName"
+    bind:change="onChangeOrder"
   />
   <van-field
     label="产品需求ID"
     value="{{ demand_id }}"
     placeholder="请输入产品需求ID"
     border="{{ false }}"
-    bind:change="onChangeName"
+    bind:change="onChangeDemand"
   />
   <van-field
     label="发货人ID"
     value="{{ deliverer_id }}"
     placeholder="请输入发货人ID"
     border="{{ false }}"
-    bind:change="onChangeName"
+    bind:change="onChangeDeliverer"
   />
   <van-field
     label="收货人ID"
     value="{{ receiver_id }}"
     placeholder="请输入收货人ID"
     border="{{ false }}"
-    bind:change="onChangeName"
+    bind:change="onChangeReceiver"
   />
   <van-field
     label="联系方式"
     value="{{ receiver_contact }}"
     placeholder="请输入联系方式"
     border="{{ false }}"
-    bind:change="onChangeName"
+    bind:change="onChangeContact"
   />
   <van-cell title="发货日期" value="{{ deliver_date }}" bind:click="onDisplay" />
   <van-field
@@ -40,7 +40,7 @@
     value="{{ deliver_address }}"
     placeholder="请输入收货地址"
     border="{{ false }}"
-    bind:change="onChangeName"
+    bind:change="onChangeAddress"
   />
   <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
 </van-cell-group>

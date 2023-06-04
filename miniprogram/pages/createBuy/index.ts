@@ -10,7 +10,6 @@ Page({
     receive_leader: '',
     leader: '',
     sign_date: '',
-    date: '',
     sign_status: '',
     show: false,
     fileList: [], // 采购合同附件
@@ -27,7 +26,7 @@ Page({
   onConfirm(event) {
     this.setData({
       show: false,
-      date: this.formatDate(event.detail),
+      sign_date: this.formatDate(event.detail),
     });
   },
   onDisplay() {
@@ -36,13 +35,22 @@ Page({
   onClose() {
     this.setData({ show: false });
   },
-  onChangeName(event) {
-    console.log(event.detail);
-    this.setData({ customer_name: event.detail });
+  onChangeContractNumber(event) {
+    this.setData({ contract_number: event.detail });
+  },
+  onChangeReceiveCompany(event) {
+    this.setData({ receive_company: event.detail });
+  },
+  onChangeReceiveLeader(event) {
+    this.setData({ receive_leader: event.detail });
   },
   onChangeLeader(event) {
     console.log(event.detail);
     this.setData({ leader: event.detail });
+  },
+  onChangeSignStatus(event) {
+    console.log(event.detail);
+    this.setData({ sign_status: event.detail });
   },
   save(){
     console.log(this.data)

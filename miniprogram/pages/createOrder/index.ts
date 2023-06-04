@@ -5,13 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    order_id:'', //  订单ID
+    order_leader:'', //  订单负责人ID
     demand_id: '', //产品需求ID
-    deliverer_id: '', // 发货人ID
-    receiver_id: '', // 收货人ID
-    receiver_contact: '', //收货人联系方式
-    deliver_date: '', //发货日期
-    deliver_address: '', // 收货地址
+    device_number: '', // 设备型号
+    device_unit: '', // 设备单价
+    device_account: '', //设备数量
     show: false,
   }, 
   showPopup() {
@@ -34,12 +32,19 @@ Page({
     this.setData({ show: false });
   },
   onChangeName(event) {
-    console.log(event.detail);
-    this.setData({ customer_name: event.detail });
+    this.setData({ order_leader: event.detail });
   },
-  onChangeLeader(event) {
-    console.log(event.detail);
-    this.setData({ leader: event.detail });
+  onChangeDemand(event) {
+    this.setData({ demand_id: event.detail });
+  },
+  onChangeDevice(event) {
+    this.setData({ device_number: event.detail });
+  },
+  onChangeUnit(event) {
+    this.setData({ device_unit: event.detail });
+  },
+  onChangeAccount(event) {
+    this.setData({ device_account: event.detail });
   },
   save(){
     console.log(this.data)

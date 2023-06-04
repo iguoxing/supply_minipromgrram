@@ -5,7 +5,7 @@
   </view>
   <view class="list" wx:if="{{records.length>0}}">
     <view class="btn">
-      <van-button type="info" round bindtap="goToCreate">新建订单</van-button>
+      <van-button type="info" round bindtap="goToCreate">新建发货</van-button>
     </view>
     <view class="item"  wx:for="{{records}}">
       <van-cell-group>

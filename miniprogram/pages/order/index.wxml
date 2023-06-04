@@ -9,17 +9,15 @@
     </view>
     <view class="item"  wx:for="{{records}}">
       <van-cell-group>
-        <van-cell label="发货日期：{{item.deliver_date}}；收货地址：{{item.deliver_address}}">
+        <van-cell label="设备型号{{item.device_number}}">
           <view slot="title">
             <label class="cell-text">
-              [订单{{item.order_id}}]
+              [负责人{{item.order_leader}}]
               [产品需求{{item.demand_id}}]
-              [发货人{{item.deliverer_id}}]
-              [收货人{{item.receiver_id}}]
-            {{item.receive_company}}-{{item.receive_leader}}</label>
-            <van-tag type="primary">{{item.receiver_contact}}</van-tag>
+            </label>
+            <van-tag type="primary">{{item.device_unit}}</van-tag>
+            <van-tag type="success"> *{{item.device_account}}</van-tag>
           </view>
-          <van-icon slot="right-icon" name="arrow" bindtap="showFile"/>
         </van-cell>
       </van-cell-group>
     </view>    

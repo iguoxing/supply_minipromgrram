@@ -8,23 +8,19 @@ Page({
   data: {
     records: [
       {
-        order_id:'1', //  订单ID
-        demand_id: '2', //产品需求ID
-        deliverer_id: '3', // 发货人ID
-        receiver_id: '4', // 收货人ID
-        receiver_contact: '15652621358', //收货人联系方式
-        deliver_date: '2022.6.1', //发货日期
-        deliver_address: '收货地址', // 收货地址
+        order_leader:'1', //  订单负责人ID
+        demand_id: '1', //产品需求ID
+        device_number: 'GFD21', // 设备型号
+        device_unit: '￥100', // 设备单价
+        device_account: '2', //设备数量
         show: false,
       },
       {
-        order_id:'12', //  订单ID
-        demand_id: '21', //产品需求ID
-        deliverer_id: '31', // 发货人ID
-        receiver_id: '41', // 收货人ID
-        receiver_contact: '15652621338', //收货人联系方式
-        deliver_date: '2022.4.1', //发货日期
-        deliver_address: '收货地址2', // 收货地址
+        order_leader:'11', //  订单负责人ID
+        demand_id: '12', //产品需求ID
+        device_number: 'GFD2131', // 设备型号
+        device_unit: '￥1000', // 设备单价
+        device_account: '6', //设备数量
         show: false,
       },
     ],

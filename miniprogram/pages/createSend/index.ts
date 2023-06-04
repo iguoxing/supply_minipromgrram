@@ -24,7 +24,7 @@ Page({
   onConfirm(event) {
     this.setData({
       show: false,
-      date: this.formatDate(event.detail),
+      deliver_date: this.formatDate(event.detail),
     });
   },
   onDisplay() {
@@ -33,13 +33,23 @@ Page({
   onClose() {
     this.setData({ show: false });
   },
-  onChangeName(event) {
-    console.log(event.detail);
-    this.setData({ customer_name: event.detail });
+  onChangeOrder(event) {
+    this.setData({ order_id: event.detail });
   },
-  onChangeLeader(event) {
-    console.log(event.detail);
-    this.setData({ leader: event.detail });
+  onChangeDemand(event) {
+    this.setData({ demand_id: event.detail });
+  },
+  onChangeDeliverer(event) {
+    this.setData({ deliverer_id: event.detail });
+  },
+  onChangeReceiver(event) {
+    this.setData({ receiver_id: event.detail });
+  },
+  onChangeContact(event) {
+    this.setData({ receiver_contact: event.detail });
+  },
+  onChangeAddress(event) {
+    this.setData({ deliver_address: event.detail });
   },
   save(){
     console.log(this.data)
