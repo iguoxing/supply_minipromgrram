@@ -1,10 +1,25 @@
 import Dialog from '@vant/weapp/dialog/dialog';
+import Notify from '@vant/weapp/notify/notify';
 
 const app = getApp<IAppOption>()
 
 
 Page({
   data: {
+    records: [
+      {
+        "customer_name":'需求1',
+        "leader": '负责人',
+        "date": '2023.5.11',
+        "fileList": 'url',
+      },
+      {
+        "customer_name":'需求2',
+        "leader": '负责人2',
+        "date": '2023.5.12',
+        "fileList": 'url',
+      }
+    ],
     active: 'index',
     show: false,
   },
@@ -14,6 +29,15 @@ Page({
     // console.log('../'+ name +'/index' )
     wx.redirectTo({
       url: '../'+ name +'/index',
+    })
+  },
+  showFile(){
+    console.log('../index' )
+    Notify({ type: 'warning', message: 'TODO 展示文件内容' });
+  },
+  goToCreate() {
+    wx.navigateTo({
+      url: '../createneed/index',
     })
   },
   // 事件处理函数

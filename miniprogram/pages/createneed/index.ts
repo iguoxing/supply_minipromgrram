@@ -1,11 +1,60 @@
-// pages/upload/music.ts
+// pages/createneed/index.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    customer_name:'',
+    leader: '',
+    date: '',
+    show: false,
     fileList: [],
+  },
+  showPopup() {
+    this.setData({ show: true });
+  },
+  formatDate(date) {
+    date = new Date(date);
+    return `${date.getMonth() + 1}-${date.getDate()}`;
+  },
+  onConfirm(event) {
+    this.setData({
+      show: false,
+      date: this.formatDate(event.detail),
+    });
+  },
+  onDisplay() {
+    this.setData({ show: true });
+  },
+  onClose() {
+    this.setData({ show: false });
+  },
+  onChangeName(event) {
+    console.log(event.detail);
+    this.setData({ customer_name: event.detail });
+  },
+  onChangeLeader(event) {
+    console.log(event.detail);
+    this.setData({ leader: event.detail });
+  },
+  save(){
+    console.log(this.data)
+    wx.request({
+      url: 'http://47.93.228.47:8000/demand/save',
+      method: 'POST',
+      data: this.data,
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        console.log(res)
+        wx.redirectTo({
+          url: '../index/index',
+        })
+      }
+    })
+    
   },
   afterRead(event) {
     const { file } = event.detail;
@@ -23,7 +72,6 @@ Page({
       },
     });
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

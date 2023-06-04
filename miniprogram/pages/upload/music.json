@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText":"上传文件",
-  "usingComponents": {
-    "van-uploader": "@vant/weapp/uploader/index",
-    "van-icon": "@vant/weapp/icon/index"
-  }
-}
