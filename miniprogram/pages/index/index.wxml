@@ -1,56 +1,13 @@
 <!--index.wxml-->
-<view class="container">
-  <image class="banner" src="https://metag.oss-cn-hangzhou.aliyuncs.com/miniprogram/music_separation/img/banner.jpg?OSSAccessKeyId=LTAI5tMch8zYHoxEUxLmrF6c&Expires=1714753345&Signature=NLFVN2uuFvnUr2NC6ZKZYf0RPOA%3D" />
-  <!-- <image src="http://tmp/pIZrggfpEQu2b07c69adf6bb5d50d58d4d86a67c6788.jpeg"></image> -->
-  <view class="title">视频提取</view>
-  <view class="list">
-    <view class="item" bindtap="bindViewUpload">
-      <van-icon name="live" size="56rpx"/>
-      <view class="name">提取视频中音乐</view>
-    </view>
-    <view class="item" bindtap="bindViewUpload">
-      <van-icon name="friends" size="56rpx"/>
-      <view class="name">提取视频中人声</view>
-    </view>
-  </view>
-  <view class="title">音频提取</view>
-  <view class="list">
-    <view class="item" bindtap="bindViewUpload">
-      <van-icon name="audio" size="56rpx"/>
-      <view class="name">提取音频中音乐</view>
-    </view>
-    <view class="item" bindtap="bindViewUpload">
-      <van-icon name="manager" size="56rpx"/>
-      <view class="name">提取音频中人声</view>
-    </view>
-  </view>
-  <view class="title">其他工具</view>
-  <view class="list">
-  <!-- <view class="list single"> -->
-    <view class="item" bindtap="bindViewUpload">
-      <van-icon name="setting" size="56rpx"/>
-      <view class="name">视频去水印</view>
-    </view>
-    <view class="item" bindtap="bindViewUpload">
-      <van-icon name="music" size="56rpx"/>
-      <view class="name">音乐转五线谱</view>
-    </view>
+<view>
+  <view>
+    <van-empty description="暂时没有产品需求~" />
+    <van-button type="info" round bindtap="goToHome">立即创建</van-button>
   </view>
   <van-tabbar active="{{ active }}" bind:change="onChange">
-    <van-tabbar-item name="index" icon="wap-home-o">首页</van-tabbar-item>
-    <van-tabbar-item name="records" icon="records">记录</van-tabbar-item>
-    <van-tabbar-item name="vip" icon="music-o">会员</van-tabbar-item>
-    <van-tabbar-item name="user" icon="user-o">我的</van-tabbar-item>
+    <van-tabbar-item name="index" icon="chat-o">需求</van-tabbar-item>
+    <van-tabbar-item name="records" icon="records">采购</van-tabbar-item>
+    <van-tabbar-item name="vip" icon="orders-o">订单</van-tabbar-item>
+    <van-tabbar-item name="user" icon="goods-collect-o">发货</van-tabbar-item>
   </van-tabbar>
-  <van-dialog id="van-dialog" />
-  <van-dialog
-    use-slot
-    title="提示"
-    show="{{ show }}"
-    show-cancel-button
-    bind:close="onClose"
-    bind:confirm="goToHeadname"
-  >
-    <view class="notice">为了您更好体验，请完善头像和昵称~</view>
-  </van-dialog>
 </view>

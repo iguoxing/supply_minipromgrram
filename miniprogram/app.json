@@ -13,7 +13,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "音乐分离 | 人声分离",
+    "navigationBarTitleText": "供需流程小程序",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

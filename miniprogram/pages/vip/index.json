@@ -1,8 +1,9 @@
 {
-  "navigationBarTitleText":"音乐分离 | 会员中心",
+  "navigationBarTitleText":"供需流程小程序",
   "usingComponents": {
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-empty": "@vant/weapp/empty/index"
   }
 }

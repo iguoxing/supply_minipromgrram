@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText":"音乐分离 | 联系客服",
+  "navigationBarTitleText":"供需流程小程序",
   "usingComponents": {
     "van-icon": "@vant/weapp/icon/index"
   }

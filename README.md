@@ -1,5 +1,5 @@
-# music_separation_miniprogram
-> 音乐分离小程序
+# supply_miniprogram
+> 供应小程序
 
 ## Git提交规范
 - feat：新功能（feature）
