@@ -1,8 +1,30 @@
 <view>
-  <view>
-    <van-empty description="暂时没有发货记录~" />
+  <view class="page" wx:if="{{records.length==0}}">
+    <van-empty description="暂时没有订单记录~" />
     <van-button type="info" round bindtap="goToHome">立即创建</van-button>
   </view>
+  <view class="list" wx:if="{{records.length>0}}">
+    <view class="btn">
+      <van-button type="info" round bindtap="goToCreate">新建订单</van-button>
+    </view>
+    <view class="item"  wx:for="{{records}}">
+      <van-cell-group>
+        <van-cell label="发货日期：{{item.deliver_date}}；收货地址：{{item.deliver_address}}">
+          <view slot="title">
+            <label class="cell-text">
+              [订单{{item.order_id}}]
+              [产品需求{{item.demand_id}}]
+              [发货人{{item.deliverer_id}}]
+              [收货人{{item.receiver_id}}]
+            {{item.receive_company}}-{{item.receive_leader}}</label>
+            <van-tag type="primary">{{item.receiver_contact}}</van-tag>
+          </view>
+          <!-- <van-icon slot="right-icon" name="arrow" bindtap="showFile"/> -->
+        </van-cell>
+      </van-cell-group>
+    </view>    
+  </view>
+  <van-notify id="van-notify" />
   <van-tabbar active="{{ active }}" bind:change="onChange">
     <van-tabbar-item name="index" icon="chat-o">需求</van-tabbar-item>
     <van-tabbar-item name="records" icon="records">采购</van-tabbar-item>

@@ -1,20 +1,34 @@
-// pages/user/index.ts
+import Notify from '@vant/weapp/notify/notify';
+// pages/records/index.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 'user',
-    showShare: false,
-    userdata: {},
-    options: [
-      { name: '微信', icon: 'wechat', openType: 'share' },
-      // { name: '微博', icon: 'weibo' },
-      // { name: '复制链接', icon: 'link' },
-      // { name: '分享海报', icon: 'poster' },
-      // { name: '二维码', icon: 'qrcode' },
+    records: [
+      {
+        order_id:'1', //  订单ID
+        demand_id: '2', //产品需求ID
+        deliverer_id: '3', // 发货人ID
+        receiver_id: '4', // 收货人ID
+        receiver_contact: '15652621358', //收货人联系方式
+        deliver_date: '2022.6.1', //发货日期
+        deliver_address: '收货地址', // 收货地址
+        show: false,
+      },
+      {
+        order_id:'12', //  订单ID
+        demand_id: '21', //产品需求ID
+        deliverer_id: '31', // 发货人ID
+        receiver_id: '41', // 收货人ID
+        receiver_contact: '15652621338', //收货人联系方式
+        deliver_date: '2022.4.1', //发货日期
+        deliver_address: '收货地址2', // 收货地址
+        show: false,
+      },
     ],
+    active: 'user',
   },
   onChange(event) {
     let name = event.detail
@@ -23,30 +37,19 @@ Page({
       url: '../'+ name +'/index',
     })
   },
-  goToRecords(){
+  showFile(){
+    console.log('../index' )
+    Notify({ type: 'warning', message: 'TODO 展示文件内容' });
+  },
+  goToCreate() {
+    wx.navigateTo({
+      url: '../createSend/index',
+    })
+  },
+  goToHome(){
     wx.redirectTo({
-      url: '../records/index',
+      url: '../index/index',
     })
-  },
-  goToOrder(){
-    wx.navigateTo({
-      url: '../order/index',
-    })
-  },
-  goToService(){
-    wx.navigateTo({
-      url: '../service/index',
-    })
-  },
-  onClick(event) {
-    this.setData({ showShare: true });
-  },onClose() {
-    this.setData({ showShare: false });
-  },
-
-  onSelect(event) {
-    // Toast(event.detail.name);
-    this.onClose();
   },
   /**
    * 生命周期函数--监听页面加载
@@ -59,12 +62,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-    console.info('r--')
-    const r = JSON.parse(wx.getStorageSync("userinfo"))
-    console.info(r)
-    this.setData({
-      userdata: r
-    })
+
   },
 
   /**

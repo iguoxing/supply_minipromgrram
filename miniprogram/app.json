@@ -10,6 +10,7 @@
     "pages/createneed/index",
     "pages/createBuy/index",
     "pages/createOrder/index",
+    "pages/createSend/index",
     "pages/logs/logs"
   ],
   "window": {

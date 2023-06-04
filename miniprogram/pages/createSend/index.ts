@@ -53,7 +53,7 @@ Page({
       success (res) {
         console.log(res)
         wx.redirectTo({
-          url: '../records/index',
+          url: '../user/index',
         })
       }
     })
